@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="container-button">
+
+    <button mat-button  (click)="openDialog()">
+      <mat-icon>add</mat-icon> Agregar Producto
+    </button>
+    
+    <button mat-button (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon> Logout
+    </button>
+
+    <button mat-button (click)="openCarrito()">
+      <mat-icon>shopping_cart</mat-icon> Carrito
+    </button>
+    
+  </div>
+  <div *ngIf="isLoading">
+    <app-progress-bar ></app-progress-bar>
+  </div>
+  
+  <div class="card-container">
+    <div class="card" *ngFor="let product of products" (click)="openProductDialog(product)">
+        <img [src]="product.image" alt="Product Image" class="image">
+        <h2>{{ product.title }}</h2>
+        <p>Price: {{ product.price }}</p>
+        <!-- <p>Category: {{ product.category }}</p>
+        <p>Description: {{ product.description }}</p> -->
+      </div>
+    </div>
+</div>

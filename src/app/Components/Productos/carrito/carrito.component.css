@@ -1,0 +1,44 @@
+.carrito-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carrito-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .carrito-table th, .carrito-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .carrito-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .carrito-table td {
+    background-color: #fff;
+  }
+  
+  .carrito-table tfoot {
+    background-color: #f0f0f0;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }

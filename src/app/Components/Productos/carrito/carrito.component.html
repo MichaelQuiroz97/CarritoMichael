@@ -1,0 +1,36 @@
+
+<div class="carrito-container">
+    <h2>Carrito de Compras</h2>
+    <table class="carrito-table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of carritocompras">
+          <td>{{ producto.title }}</td>
+          <td>{{ producto.price | currency }}</td>
+          <td>
+            <button (click)="eliminarProducto(producto)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total:</td>
+          <td>{{ total | currency }}</td>
+        </tr>
+      </tfoot>
+    </table>
+    <button mat-raised-button mat-primary (click)="procesarPago()">
+        <mat-icon>payment</mat-icon>
+        Procesar Pago
+      </button>
+      <button mat-raised-button (click)="RegresarHome()">
+        <mat-icon>arrow_back</mat-icon>
+        Volver
+      </button>
+  </div>

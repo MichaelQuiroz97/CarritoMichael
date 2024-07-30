@@ -1,0 +1,27 @@
+<div class="container">
+  <app-progress-bar *ngIf="isloading"></app-progress-bar>
+  <mat-dialog-content class="custom-form">
+  <h1>Agregar Producto</h1>
+  <form [formGroup]="productForm" class="form">
+    <mat-form-field>
+      <input matInput formControlName="title" placeholder="Título">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="price" placeholder="Precio">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="description" placeholder="Descripción">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="image" placeholder="URL de la imagen">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="category" placeholder="Categoría">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button (click)="onSubmit()">Agregar Producto</button>
+</mat-dialog-actions>
+</div>

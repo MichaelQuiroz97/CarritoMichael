@@ -1,0 +1,22 @@
+
+<div mat-dialog-content class="container">
+    <mat-card class="mat-card">
+      <mat-card-header class="header">
+        <mat-card-title class="mat-card-title">{{ product.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="mat-card-content">
+        <img [src]="product.image" alt="Product Image" class="image">
+        <p>Precio: {{ product.price }}</p>
+        <p>Categoria: {{ product.category }}</p>
+        <p>Descripción: {{ product.description }}</p> 
+      </mat-card-content>
+      <mat-card-actions  class="mat-card-actions">
+        <button mat-raised-button color="primary" (click)="agregarAlCarrito()">
+          <mat-icon>add_shopping_cart</mat-icon> Agregar al carrito
+        </button>
+        <button mat-raised-button color="warn" (click)="salir()">
+          <mat-icon>close</mat-icon> Salir
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
